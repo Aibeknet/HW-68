@@ -1,11 +1,12 @@
-import './App.css'
+import Todo from "./containers/Todo.tsx";
 
 const App = () => {
-  return (
-    <>
-        hello!
-    </>
-  )
+    return (
+        <>
+            <Todo />
+        </>
+    );
 };
 
-export default App
+export default App;
+
