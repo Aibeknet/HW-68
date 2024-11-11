@@ -34,7 +34,7 @@ const Todo = () => {
     };
 
     const handleDeleteTodo = async (id: string) => {
-        setDeletingId(id); // Устанавливаем состояние загрузки
+        setDeletingId(id);
         try {
             await dispatch(deleteTodo(id));
         } catch (error) {
@@ -99,7 +99,7 @@ const Todo = () => {
                                     <button
                                         onClick={() => handleDeleteTodo(todo.id)}
                                         className="btn btn-danger btn-sm"
-                                        disabled={deletingId === todo.id || !todo.status} // Блокировка кнопки во время загрузки
+                                        disabled={deletingId === todo.id || !todo.status}
                                     >
                                         {deletingId === todo.id ? 'Deleting...' : 'Delete'}
                                     </button>
